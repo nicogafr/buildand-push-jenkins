@@ -1,8 +1,8 @@
 node {
 
 
-   def IMAGE="workout/app:4.5"
-
+   def IMAGE="$PROJECT/app:4.5"
+   def PROJECT="from-jenkins"
     stage('Clone') {
           checkout scm
     }
