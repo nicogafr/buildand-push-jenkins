@@ -1,6 +1,6 @@
 node {
 
-   def PROJECT="from-jenkins"
+   def PROJECT="from-jenkinico"
    def IMAGE="$PROJECT/app:4.5"
 
     stage('Clone') {
@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-       docker.withRegistry('https://registry.ludovic.io/' , 'harbor_id') {
+       docker.withRegistry('https://registry.ludovic.io/' , 'nicolas') {
               img.push 'latest'
               img.push()
           }
